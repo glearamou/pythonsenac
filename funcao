@@ -1,0 +1,74 @@
+'''
+1 - O que é função?
+As funções são blocos de código reutilizáveis que realizam uma tarefa específica.
+Elas ajudam a organizar o código e facilitam a manutenção.
+
+'''
+#2 - Sintaxe basica da função
+def nome_da_funcao():
+    #corpo da função
+    #comandos da função
+    resultado = 0
+    return resultado
+
+#Def - palavra-chave para definir a função
+#nome_da_funcao - nome que identifica a função
+#return - especifica o que a funcao retorna
+
+print('Função simples')
+print(15*'-')
+
+#Cria a função
+def saudacao():
+    print('Olá, Boa noite!')
+
+#Chama a função
+saudacao()
+
+print(20*'-')
+print('Função com parâmetros')
+print(20*'-')
+
+def saudacao_turma(nome_aluno):
+    print('Até breve, {}'.format(nome_aluno))
+
+def saudacao_dois():
+    print('Ass: W. Bonner')
+    print(20 * '-')
+
+saudacao_turma('Glenda')
+saudacao_dois()
+
+def turma_aluno(turma, aluno):
+    print(f'X alunx {aluno} pertence turma senac{turma}')
+
+turma_aluno(2023.1, 'Bela')
+
+print(20*'-')
+print('Função com retorno')
+print(20*'-')
+
+def soma(valor_um, valor_dois):
+    return valor_um + valor_dois
+
+resultado = soma(5,6)
+print(f'5 + 6 = {resultado}')
+
+resultado_dois = soma(8,6)
+print(f'8 + 6 = {resultado_dois}')
+
+def multiplicar(valor_um,valor_dois):
+    resultado = valor_um * valor_dois
+    return resultado
+
+multi = multiplicar(5,6)
+print(f'5 * 6 = {multi}')
+
+multi_dois = multiplicar(8,6)
+print(f'8 * 6 = {multi_dois}')
+
+print('Multiplicação')
+numero_um = 65
+numero_dois = 120
+multi = multipicar(numero_um,numero_dois)
+print(f'{numero_um} x {numero_dois} = {multi}')
