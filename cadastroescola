@@ -1,0 +1,126 @@
+import random
+
+nome=str(input("Nome completo: "))
+idade=int(input("Idade: "))
+email=str(input("E-mail: "))
+pais=str(input("Nome dos responsáveis: "))
+
+enem = ()
+
+if idade >=16:
+    print("Você precisa da Nota do ENEM:")
+    enem =int(input("Nota ENEM:"))
+else:
+    print("Você não precisa inserir a Nota")
+
+if enem >= 500:
+    print ("Você alcançou a média!")
+elif enem == 499:
+    print("Você quase alcançou a média!")
+else:
+    print("Você não alcançou a média!")
+
+
+renda_familiar = float(input("Qual sua renda familiar?\n 1 - até 1500\n 2- até 3000\n 3- até 5000"))
+
+match renda_familiar:
+     case 1:
+          print("Você conseguiu bolsa de 100%")
+     case 2:
+          print("Você conseguiu bolsa de 50%")
+     case 3:
+          print("Você não ganhou bolsa")
+
+rel_alunos = []
+rel_alunos.append(nome+str(idade)+email+pais)
+print(rel_alunos)
+
+print("Sua Matricula é "+ str(random.randint(10000, 99999)))
+
+calc = int(input("1 - soma\n 2 - sub\n 3 - mul\n 4 - div\n 5 - pot\n 6 - Resto\n"))
+match calc:
+    case 1:
+        data = str(datetime.datetime.now())
+        data_format = data.replace(':','_')
+        soma = n1 + n2
+        print(n1 + n2)
+        print(data_format)
+
+        nameFile = "soma_"+data_format+".txt"
+        file = open(nameFile, "a")
+        file.write("A soma de "+str(n1)+" + "+str(n2)+" é "+str(soma))
+        file.close()
+
+    case 2:
+        data = str(datetime.datetime.now())
+        data_format = data.replace(':', '_')
+        sub = n1 - n2
+        print(n1 - n2)
+        print(data_format)
+
+        nameFile = "sub_" + data_format + ".txt"
+        file = open(nameFile, "a")
+        file.write("A subtração de " + str(n1) + " - " + str(n2) + " é " + str(sub))
+        file.close()
+
+    case 3:
+        data = str(datetime.datetime.now())
+        data_format = data.replace(':', '_')
+        mul = n1 * n2
+        print(n1 * n2)
+        print(data_format)
+
+        nameFile = "mul_" + data_format + ".txt"
+        file = open(nameFile, "a")
+        file.write("A multiplicação de " + str(n1) + " * " + str(n2) + " é " + str(mul))
+        file.close()
+
+    case 4:
+        data = str(datetime.datetime.now())
+        data_format = data.replace(':', '_')
+        div = n1 / n2
+        print(n1 / n2)
+        print(data_format)
+
+        nameFile = "div_" + data_format + ".txt"
+        file = open(nameFile, "a")
+        file.write("A divisão de " + str(n1) + " / " + str(n2) + " é " + str(div))
+        file.close()
+
+    case 5:
+        data = str(datetime.datetime.now())
+        data_format = data.replace(':', '_')
+        pot = n1 % n2
+        print(n1 % n2)
+        print(data_format)
+
+        nameFile = "div_" + data_format + ".txt"
+        file = open(nameFile, "a")
+        file.write("A potência de " + str(n1) + " % " + str(n2) + " é " + str(pot))
+        file.close()
+
+    case 6:
+        data = str(datetime.datetime.now())
+        data_format = data.replace(':', '_')
+
+        print(data_format)
+        if n1 < n2:
+            mod = n2 % n1
+            a = n2
+            b = n1
+            n1 = a
+            n2 = b
+            print(mod)
+        else:
+            mod = n1 % n2
+            print(mod)
+
+        nameFile = "mod_" + data_format + ".txt"
+        file = open(nameFile, "a")
+        file.write("O resto de " + str(n1) + " % " + str(n2) + " é " + str(mod))
+        file.close()
+
+opcao = input("Deseja usar a calculadora? S ou N ")
+
+
+
